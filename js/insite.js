@@ -1,19 +1,22 @@
 /**
  * Created by Akiba on 2014/8/19.
  */
-
-    // Can also be used with $(document).ready()
 $(window).load(function() {
-    $('.flexslider').flexslider({
+    $('.first-slider').flexslider({
         animation: "slide",
         prevText: '',
         nextText: ''
     });
     $(window).resize(function(){
-        $('.flexslider .flex-direction-nav').css('width',$('body').width());
+        $('.first-slider .flex-direction-nav').css('width',$('body').width());
     });
-    $('.flexslider .flex-direction-nav').css('width',$('body').width());
+    $('.first-slider .flex-direction-nav').css('width',$('body').width());
+    $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        slideshow: false,
+        itemWidth: 160,
+        itemMargin: 18,
+        directionNav: false
+    });
 });
-
-
-

@@ -10,10 +10,12 @@
   text-shadow:0px 0px 1px rgba(0,0,0,0.1);
   -webkit-font-smoothing: subpixel-antialiased;
 }
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic);
+
 body {
   font-size:1em;
   position:relative;
-  font-family:"Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei",sans-serif;
+  font-family:"lato","Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei",sans-serif;
   color:#404040;
   z-index:0;
   overflow-x:hidden;
@@ -238,31 +240,78 @@ section.main-content {
     .main-slider {
       margin-left: 5px;
       width: 780px;
-      .flex-control-nav {
-        bottom: 20px;
-      }
-      .flex-direction-nav {
-        a {
-          height: 80px;
-          width: 80px;
+      .flexslider {
+        border: none;
+        margin:0;
+        .flex-control-nav {
+          bottom: 20px;
         }
-        .flex-prev {
-          &::before {
-            font-family: 'FontAwesome';
-            color:#fff;
-            font-size: 80px;
-            content: "\f104";
+        .flex-direction-nav {
+          a {
+            height: 80px;
+            width: 80px;
+          }
+          .flex-prev {
+            &::before {
+              font-family: 'FontAwesome';
+              color:#fff;
+              font-size: 80px;
+              content: "\f104";
+            }
+          }
+          .flex-next {
+            &::before {
+              font-family: 'FontAwesome';
+              color:#fff;
+              font-size: 80px;
+              content: "\f105";
+            }
           }
         }
-        .flex-next {
-          &::before {
-            font-family: 'FontAwesome';
-            color:#fff;
-            font-size: 80px;
-            content: "\f105";
-          }
-        }
       }
+    }
+  }
+  .second-row {
+    position: relative;
+    color: #979797;
+    display: block;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    line-height: 50px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    &::before {
+      content: url(../img/free-left.jpg);
+      position: absolute;
+      top:0;
+      left: 0;
+    }
+    &::after {
+      content: url(../img/free-right.jpg);
+      position: absolute;
+      top:0;
+      right: 0;
+    }
+  }
+  .third-row {
+    height: auto;
+    overflow: hidden;
+    img {
+      cursor: pointer;
+      width: 310px;
+      height: auto;
+    }
+  }
+  .fourth-row {
+    margin-top: 10px;
+    .title {
+      color: #2929292;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 17px;
+      text-align: center;
     }
   }
 }
